@@ -23,7 +23,7 @@
                  $query $k))
 
 ;Match using structural random embedding:
-(= (match-sri $k $space $query)
+(= (match-SRI $k $space $query)
    (let ($vdb $dim) (get-state $space)
         (faiss_search $vdb (embed $query $dim) $k)))
 

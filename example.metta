@@ -13,5 +13,5 @@
 !(add-atom-SRI &sri ((red apple) strudel))
 !(add-atom-SRI &sri ((yellow banana) strudel))
 !(add-atom-SRI &sri (strudel chaos))
-!(test (atom-of (match-sri 1 &sri ((red strawberry) strudel)))
+!(test (atom-of (match-SRI 1 &sri ((red strawberry) strudel)))
        ((red apple) strudel))
