@@ -6,7 +6,7 @@ module(faiss,
     ]).
 
 :- initialization(faiss_init).
-faiss_init :- working_dir(Base),
+faiss_init :- library_path(Base),
               atomic_list_concat([Base, '/faisslib.so'], Path),
               use_foreign_library(Path).
 

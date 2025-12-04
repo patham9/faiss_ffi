@@ -1,7 +1,7 @@
-!(import! &self ../lib/lib_prolog)
+!(import! &self (library lib_prolog))
 
-!(import_prolog_functions_from_file "/home/nartech/PeTTa/faiss_ffi/faiss.pl" (faiss_create faiss_add faiss_search faiss_remove))
-!(import_prolog_functions_from_file "/home/nartech/PeTTa/faiss_ffi/embed.pl" (embed))
+!(import_prolog_functions_from_file (library "faiss.pl") (faiss_create faiss_add faiss_search faiss_remove))
+!(import_prolog_functions_from_file (library "embed.pl") (embed))
 
 ;Create a new atom-tagged vectorspace
 (= (new-atom-vectorspace $space $dimension)
