@@ -6,8 +6,7 @@ module(faiss,
     ]).
 
 :- initialization(faiss_init).
-faiss_init :- working_dir(Base),
-              library('faiss_ffi', 'faisslib.so', Path),
+faiss_init :- library('faiss_ffi', 'faisslib.so', Path),
               use_foreign_library(Path).
 
 :- dynamic faiss_next_id/2.      % faiss_next_id(Index, NextIntId)
